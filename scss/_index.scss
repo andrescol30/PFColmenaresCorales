@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    background-color: $color-primario;
+}
+
+header a img{
+    display: block;
+    margin: 0 auto;
+    width: 230px;
+}
+
+.navbar a{
+    color: white;
+}
+
+.dropdown-menu {
+    background-color: $color-primario;
+    
+}
+
+.navbar-toggler {
+    background-color: white;
+    color: $color-primario;
+}
+
+#carouselExampleIndicators {
+        width: 80%;
+        padding: 10px;
+}
+
+.carousel-item img {
+        height: 150px;
+}
+
+
+@media (min-width: 768px) {
+    .carousel-item img {
+        height: 250px;
+    }
+}
+
+@media (min-width: 992px) {
+    #carouselExampleIndicators {
+        width: 70%;
+}
+
+    .carousel-item img {
+        height: 450px;
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+.card {
+    border: solid 10px $color-primario;
+    margin-top: 10px;
+    width: 220px;
+    position: relative;
+
+    img {
+        @include sizes(200px, 150px);
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.card-body {
+    background-color: $color-primario;
+
+    p {
+        color: white;
+    }
+}
+
+.cMessage1 {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    background-color: $color-secundario;
+}
+
+.cMessage2 {
+    position: absolute;
+    top: 12%;
+    right: 10%;
+    background-color: $color-secundario;
+}
+
+@media (min-width: 768px) {
+    .pNuevos {
+        @include grid-center;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 380px 380px;      
+    }
+
+    .ofertas {
+        @include grid-center;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 380px 380px;      
+    }
+
+    .card {
+        width: 260px;
+
+        img {
+            @include sizes(235px, 180px);
+        }
+    }
+
+    .card-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pNuevos {
+        grid-template-areas: 
+        "card card card card";
+        grid-template-rows: 1fr;
+        grid-template-columns: 300px 300px 300px 300px;
+    }
+
+    .ofertas {
+        grid-template-areas: 
+        "card card card card";
+        grid-template-rows: 1fr;
+        grid-template-columns: 300px 300px 300px 300px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+}
+
+a:hover {
+    color: white !important;
+}
+
+

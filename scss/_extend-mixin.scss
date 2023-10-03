@@ -1,0 +1,20 @@
+@mixin grid-center {
+    display: grid;
+    justify-content: center;
+}
+
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+.btn {
+    margin: 0 auto;
+    display: block;
+}
+
+.buy {
+    @extend .btn;
+    background-color: $color-secundario;
+    color: white;
+}

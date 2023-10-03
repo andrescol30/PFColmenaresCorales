@@ -1,0 +1,20 @@
+.pcEntrada .card {
+    width: 300px;
+
+    img{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    .pcEntrada .card {
+        width: 400px;
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    }
+}

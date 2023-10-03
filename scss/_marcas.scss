@@ -1,0 +1,30 @@
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+
+    img {
+        width: 330px;
+        height: 180px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1200px){ 
+    .galeria {
+        display: grid;
+        grid-template-areas: 
+        "img img img"
+        "img img img";
+        row-gap: 35px;
+        justify-items: center;
+        align-items: center;
+        margin-top: 80px;
+
+        img{
+            width: 400px;
+            height: 216px;
+        }
+    }
+}
