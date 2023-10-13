@@ -1,4 +1,27 @@
+#grid-marcas {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "titulo"
+    "galeria"
+    "footer";
+    grid-template-rows: auto 50px 1fr 30px;
+    height: 100vh;
+}
+
+.header-marcas {
+    grid-area: header;
+}
+
+.titulo-marcas {
+    grid-area: titulo;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
 .galeria {
+    grid-area: galeria;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,6 +32,11 @@
         height: 180px;
         object-fit: cover;
     }
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    transition: all 1s ease;
 }
 
 @media (min-width: 1200px){ 
@@ -27,4 +55,11 @@
             height: 216px;
         }
     }
+}
+
+.footer-marcas {
+    grid-area: footer;
+    text-align: center;
+    background-color: $color-primario;
+    color: white;
 }

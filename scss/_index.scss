@@ -57,6 +57,11 @@ header a img{
     }
 }
 
+h1 {
+    text-align: center;
+}
+
+
 h2 {
     text-align: center;
 }
@@ -71,6 +76,11 @@ h2 {
         @include sizes(200px, 150px);
         display: block;
         margin: 0 auto;
+    }
+
+    &:hover {
+        transform: scale(1.05) !important;
+        transition: all 1s ease;
     }
 }
 
@@ -132,15 +142,17 @@ h2 {
     .pNuevos {
         grid-template-areas: 
         "card card card card";
-        grid-template-rows: 1fr;
-        grid-template-columns: 300px 300px 300px 300px;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        column-gap: 20px;
     }
 
     .ofertas {
         grid-template-areas: 
         "card card card card";
-        grid-template-rows: 1fr;
-        grid-template-columns: 300px 300px 300px 300px;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        column-gap: 20px;
     }
 
     h2 {
@@ -154,4 +166,13 @@ a:hover {
     color: white !important;
 }
 
+footer {
+    text-align: center;
+    background-color: $color-primario;
+    color: white;
+    
+    p {
+        margin-bottom: 0rem;
+    }
+}
 

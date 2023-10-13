@@ -62,6 +62,10 @@ header a img {
     height: 450px;
   }
 }
+h1 {
+  text-align: center;
+}
+
 h2 {
   text-align: center;
 }
@@ -77,6 +81,10 @@ h2 {
   width: 200px;
   display: block;
   margin: 0 auto;
+}
+.card:hover {
+  transform: scale(1.05) !important;
+  transition: all 1s ease;
 }
 
 .card-body {
@@ -104,12 +112,16 @@ h2 {
   .pNuevos {
     display: grid;
     justify-content: center;
+    align-items: center;
+    justify-items: center;
     grid-template-columns: 300px 300px;
     grid-template-rows: 380px 380px;
   }
   .ofertas {
     display: grid;
     justify-content: center;
+    align-items: center;
+    justify-items: center;
     grid-template-columns: 300px 300px;
     grid-template-rows: 380px 380px;
   }
@@ -132,13 +144,15 @@ h2 {
 @media (min-width: 1200px) {
   .pNuevos {
     grid-template-areas: "card card card card";
-    grid-template-rows: 1fr;
-    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    column-gap: 20px;
   }
   .ofertas {
     grid-template-areas: "card card card card";
-    grid-template-rows: 1fr;
-    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    column-gap: 20px;
   }
   h2 {
     font-size: 2rem;
@@ -150,7 +164,34 @@ a:hover {
   color: white !important;
 }
 
+footer {
+  text-align: center;
+  background-color: #000046;
+  color: white;
+}
+footer p {
+  margin-bottom: 0rem;
+}
+
+#grid-marcas {
+  display: grid;
+  grid-template-areas: "header" "titulo" "galeria" "footer";
+  grid-template-rows: auto 50px 1fr 30px;
+  height: 100vh;
+}
+
+.header-marcas {
+  grid-area: header;
+}
+
+.titulo-marcas {
+  grid-area: titulo;
+  text-align: center;
+  margin-top: 20px;
+}
+
 .galeria {
+  grid-area: galeria;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,6 +201,11 @@ a:hover {
   width: 330px;
   height: 180px;
   object-fit: cover;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  transition: all 1s ease;
 }
 
 @media (min-width: 1200px) {
@@ -176,6 +222,13 @@ a:hover {
     height: 216px;
   }
 }
+.footer-marcas {
+  grid-area: footer;
+  text-align: center;
+  background-color: #000046;
+  color: white;
+}
+
 .pcEntrada .card {
   width: 300px;
 }
@@ -192,6 +245,111 @@ a:hover {
     width: 300px;
     height: 300px;
   }
+}
+.footer-armadas {
+  text-align: center;
+  background-color: #000046;
+  color: white;
+}
+
+#p-ofertas {
+  display: grid;
+  grid-template-areas: "header" "titulo" "productos" "footer";
+  grid-template-rows: auto 50px 1fr 30px;
+  height: 100vh;
+}
+
+.header-ofertas {
+  grid-area: header;
+}
+
+.titulo-ofertas {
+  grid-area: titulo;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card-ofertas {
+  grid-area: productos;
+}
+
+@media (min-width: 768px) {
+  .card-ofertas {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 380px 380px;
+  }
+}
+@media (min-width: 1200px) {
+  .card-ofertas {
+    grid-template-areas: "card card card card";
+    grid-template-rows: 1fr;
+    grid-template-columns: 300px 300px 300px 300px;
+  }
+}
+.card {
+  margin-bottom: 10px;
+}
+
+.footer-ofertas {
+  grid-area: footer;
+  text-align: center;
+  background-color: #000046;
+  color: white;
+}
+
+#p-nuevos {
+  display: grid;
+  grid-template-areas: "header" "titulo" "productos" "footer";
+  grid-template-rows: auto 50px 1fr 30px;
+  height: 100vh;
+}
+
+.header-nuevos {
+  grid-area: header;
+}
+
+.titulo-nuevos {
+  grid-area: titulo;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.productos-nuevos {
+  grid-area: productos;
+}
+
+@media (min-width: 768px) {
+  .productos-nuevos {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 380px 380px;
+  }
+}
+@media (min-width: 1200px) {
+  .productos-nuevos {
+    grid-template-areas: "card card card card";
+    grid-template-rows: 1fr;
+    grid-template-columns: 300px 300px 300px 300px;
+  }
+}
+.card {
+  margin-bottom: 10px;
+}
+
+.footer-nuevos {
+  grid-area: footer;
+  text-align: center;
+  background-color: #000046;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

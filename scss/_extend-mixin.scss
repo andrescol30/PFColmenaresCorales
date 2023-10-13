@@ -1,6 +1,8 @@
 @mixin grid-center {
     display: grid;
     justify-content: center;
+    align-items: center;
+    justify-items: center;
 }
 
 @mixin sizes($width, $height) {
